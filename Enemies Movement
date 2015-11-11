@@ -1,0 +1,30 @@
+ public void moveEnemies(){
+        Random rand = new Random();
+
+        for (int i = 0; i < enemies.size(); ++i){
+            SpaceCraft enemy = enemies.get(i);
+
+            if (enemies.get(i).isAlive()){
+                enemies.get(i).moveForward(ENEMY_SPEED);
+                if (i % 2 == 0 && enemies.get(i).getY() > 0){
+                    if (enemies.get(i).getX() > 0 && enemies.get(i).getX() < 400){
+                        enemies.get(i).moveRight();
+                    }
+                    if (enemies.get(i).getX() > 500 && enemies.get(i).getX() < screenWidth - 60){
+                        enemies.get(i).moveLeft();
+                    }
+                }
+            }
+
+            if (!enemy.isAlive() || enemy.getY() > screenHeight){
+                int x_position = 50 + rand.nextInt(screenWidth - 100);
+                int y_position = -rand.nextInt(ENEMIES_SPAWN_Y);
+                enemy = new SpaceCraft(x_position, y_position);
+
+                enemies.set(i, enemy);
+            }
+
+        }
+    }
+
+    private static Random rand = new Random();
