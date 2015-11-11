@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Scroller.iml" filepath="$PROJECT_DIR$/Scroller.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/JungleRun.iml" filepath="$PROJECT_DIR$/.idea/JungleRun.iml" />
     </modules>
   </component>
 </project>

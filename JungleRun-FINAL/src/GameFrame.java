@@ -8,7 +8,7 @@ public class GameFrame {
     public GameFrame(){
         frame.add(new Game(), BorderLayout.CENTER);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setTitle("Jungle run");
+        frame.setTitle("Jungle Run");
         frame.setExtendedState(Frame.MAXIMIZED_BOTH);
         frame.setUndecorated(true);
         frame.setAlwaysOnTop(true);

@@ -26,7 +26,7 @@ public class Player {
 
     public Player(){
 
-        ImageIcon img = new ImageIcon("images/spacecraft.png");
+        ImageIcon img = new ImageIcon("images/DuckUp.gif");
         spaceShip     = img.getImage();
 
         this.x_pos = Toolkit.getDefaultToolkit().getScreenSize().width / 2;

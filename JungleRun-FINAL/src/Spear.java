@@ -59,21 +59,6 @@ public class Spear implements IEnemy {
         return this.y_pos;
     }
 
-//    public void setX(int x){
-//        this.x_pos = x;
-//    }
-//
-//    public void setY(int y){
-//        this.y_pos = y;
-//    }
-//
-//    public int getCurrentFireDelay() {
-//        return currentFireDelay;
-//    }
-//
-//    public void setCurrentFireDelay(int delay) {
-//        currentFireDelay = delay;
-//    }
 
     /**
      * Method that creates an "invisible" rectangle around the enemy, so

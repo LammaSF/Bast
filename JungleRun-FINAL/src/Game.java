@@ -84,7 +84,7 @@ public class Game extends JPanel implements ActionListener {
                 JFrame frame = new JFrame();
                 frame.add(new Game(), BorderLayout.CENTER);
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                frame.setTitle("Spacecraft Battles");
+                frame.setTitle("Jungle Run");
                 frame.setExtendedState(Frame.MAXIMIZED_BOTH);
                 frame.setUndecorated(true);
                 frame.setAlwaysOnTop(true);
@@ -196,7 +196,7 @@ public class Game extends JPanel implements ActionListener {
         player    = new Player();
  
         /* spawn enemies */
-        for (int i = 0; i < 60 ; ++i){
+        for (int i = 0; i < 40 ; ++i){
             int x_position = 50 + randGen.nextInt(screenWidth - 100);
             int y_position = -randGen.nextInt(ENEMIES_SPAWN_Y);
 
@@ -213,11 +213,6 @@ public class Game extends JPanel implements ActionListener {
 
         // set the background for the game menu for different resolutions
         String menuBackground = "images/gameMenuBG.jpg";
-        if (screenWidth == 1366 && screenHeight == 768){
-            menuBackground = "images/gameMenu2.jpg";
-        } else if (screenWidth == 1440 && screenHeight == 900){
-            menuBackground = "images/gameMenu3.jpg";
-        }
         ImageIcon bgImg = new ImageIcon(menuBackground);
         backgroundMenu  = bgImg.getImage();
         bgMotion = background.getHeight(null);
