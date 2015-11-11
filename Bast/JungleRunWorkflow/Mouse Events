@@ -1,0 +1,82 @@
+ /**
+     * Class for registering mouse events
+     */
+    private class MouseEvents extends MouseAdapter {
+
+        @Override
+        public void mouseMoved(MouseEvent e){
+            int mouseX = e.getX();
+            int mouseY = e.getY();
+
+            if (mouseX > menu.startButton().x && mouseX < menu.startButton().x + menu.startButton().width &&
+                    mouseY > menu.startButton().y && mouseY < menu.startButton().y + menu.startButton().height &&
+                    !isGameStarted && menu.isMainMenuActive()){
+
+                isStartButtonHovered = true;
+
+            } else {
+                isStartButtonHovered = false;
+            }
+
+            if (mouseX > menu.settingsButton().x && mouseX < menu.settingsButton().x + menu.settingsButton().width &&
+                    mouseY > menu.settingsButton().y && mouseY < menu.settingsButton().y + menu.settingsButton().height &&
+                    !isGameStarted && menu.isMainMenuActive()){
+
+                isSettingsButtonHovered = true;
+
+            } else {
+                isSettingsButtonHovered = false;
+            }
+
+            if (mouseX > menu.exitButton().x && mouseX < menu.exitButton().x + menu.exitButton().width &&
+                    mouseY > menu.exitButton().y && mouseY < menu.exitButton().y + menu.exitButton().height &&
+                    !isGameStarted && menu.isMainMenuActive()){
+
+                isExitButtonHovered = true;
+
+            } else {
+                isExitButtonHovered = false;
+            }
+
+            if (mouseX > menu.backButton().x && mouseX < menu.backButton().x + menu.backButton().width &&
+                    mouseY > menu.backButton().y && mouseY < menu.backButton().y + menu.backButton().height &&
+                    !isGameStarted){
+
+                isBackButtonHovered = true;
+
+            } else {
+                isBackButtonHovered = false;
+            }
+        }
+
+        @Override
+        public void mousePressed(MouseEvent e){
+            int mouseX = e.getX();
+            int mouseY = e.getY();
+
+            if (mouseX > menu.startButton().x && mouseX <  menu.startButton().x +  menu.startButton().width &&
+                    mouseY >  menu.startButton().y && mouseY <  menu.startButton().y +  menu.startButton().height &&
+                    !isGameStarted && menu.isMainMenuActive()){
+
+                isGameStarted = true;
+            }
+            if (mouseX > menu.settingsButton().x && mouseX < menu.settingsButton().x + menu.settingsButton().width &&
+                    mouseY > menu.settingsButton().y && mouseY < menu.settingsButton().y + menu.settingsButton().height &&
+                    !isGameStarted && menu.isMainMenuActive()){
+
+                menu.setSettingsOpened(true);
+            }
+            if (mouseX > menu.backButton().x && mouseX < menu.backButton().x + menu.backButton().width &&
+                    mouseY > menu.backButton().y && mouseY < menu.backButton().y + menu.backButton().height &&
+                    !isGameStarted){
+
+                menu.setBackClicked(true);
+            }
+            if (mouseX > menu.exitButton().x && mouseX < menu.exitButton().x + menu.exitButton().width &&
+                    mouseY > menu.exitButton().y && mouseY < menu.exitButton().y + menu.exitButton().height &&
+                    !isGameStarted && menu.isMainMenuActive()){
+
+                System.exit(0);
+            }
+        }
+    }

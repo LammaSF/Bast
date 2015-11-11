@@ -1,0 +1,6 @@
+else { 
+
+                isMainMenuActive = true;
+                isBackButtonClicked = false;
+                isSettingsOpened    = false;
+     }
